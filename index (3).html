@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>login</h2>
+    <form id="login-form">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="options">
+        <div class="remember-me">
+          <input type="checkbox" id="remember-me" name="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <div id="message"></div>
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById('login-form');
+    const messageDiv = document.getElementById('message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        messageDiv.textContent = 'Please fill in both username and password';
+      } else {
+        // You can add your login logic here
+        window.location.href = 'dashboard.html';
+      }
+    });
+  </script>
+</body>
+</html>

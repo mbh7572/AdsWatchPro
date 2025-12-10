@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0012FFD1;
+  color: #000000;
+  padding: 0em;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.hero {
+  background-image: linear-gradient(to bottom, #0012FFD1, #0038FF);
+  background-size: 100% 10px;
+  background-position: 0% 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.earn-section {
+  padding: 2em;
+}
+
+.earn-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.earn-btn {
+  background-color: #0038FF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.invite-section {
+  padding: 2em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #FF0000;
+  padding: 10px;
+  text-align: left;
+}
+
+.balance-section {
+  padding: 2em;
+}
+
+footer {
+  background-color: #0200FF;
+  color: #fff;
+  padding: 0.5em;
+  text-align: center;
+  clear: both;
+}
