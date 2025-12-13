@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <style>
+    .timer-container {
+      display: flex;
+      gap: 2px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .timer-box {
+      background: #4CAF50;
+      color: #fff;
+      padding: 0.1px;
+      border-radius: 1000px;
+      text-align: center;
+      min-width: 82px;
+    }
+    .timer-box span {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .timer-box small {
+      font-size: 10px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timer-container">
+    <div class="timer-box">
+      <span id="days">00</span>
+      <small>Days</small>
+    </div>
+    <div class="timer-box">
+      <span id="hours">00</span>
+      <small>Hours</small>
+    </div>
+    <div class="timer-box">
+      <span id="minutes">00</span>
+      <small>Minutes</small>
+    </div>
+    <div class="timer-box">
+      <span id="seconds">00</span>
+      <small>Seconds</small>
+    </div>
+  </div>
+
+  <script>
+    // Set the date and time to countdown to
+    const countDownDate = new Date("Dec 20, 2025 21:00:00").getTime();
+
+    // Update the count down every 1 second
+    const x = setInterval(function() {
+      // Get today's date and time
+      const now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      const distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with ids
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.querySelectorAll('.timer-box span').forEach(el => el.innerText = "00");
+        document.querySelector('.timer-container').innerHTML = "<h2>EXPIRED</h2>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .product-container {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px 20px 20px 20px;
+        }
+        .product-details {
+            padding: 20px;
+        }
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .product-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .buy-now-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buy-now-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <img src="logo1.jpg" alt="Product Image" class="product-image">
+        <div class="product-details">
+            <h2 class="product-name">Premium Membership</h2>
+            <p class="product-price">1000 PKR</p>
+            <p class="product-description"><h4>Unlock Exclusive Benefits with Our Premium Membership</h4>
+
+
+
+<h4>Daily Income:</h4> Get your Ads income daily
+<h4>Fast Withdrawal Processing: </h4> Your Withdrawal will be processed fast than regular members
+<h4>Exclusive Premium Dashboard: </h4>Enjoy Premium Dashboard 
+<h4>Priority customer support:</h4> Get priority assistance from our dedicated support team <br />
+
+<h5>Join now and start enjoying the benefits of our Premium Membership!</h5></p>
+           <center><button class="buy-now-button" onclick="window.location.href='b.html'">Buy Now</button>
+</center>
+        </div>
+    </div>
+</body>
+</html>
+
